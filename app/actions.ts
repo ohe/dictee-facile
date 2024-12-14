@@ -7,7 +7,15 @@ const apiKey = process.env.MISTRAL_API_KEY;
 const client = new Mistral({apiKey: apiKey});
 
 
-export async function askMistral(formData: any) {
+// XXX: how to mutualize this code with the one in app/page.tsx?
+interface FormData {
+    level: string;
+    words: string[];
+    verbs: string[];
+    tenses: string[];
+  }
+
+export async function askMistral(formData: FormData) {
 
     const level = formData.level;
     const words = formData.words.join(",");

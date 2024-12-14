@@ -25,8 +25,13 @@ export default function Home() {
     e.preventDefault();
     setLoading(true);
 
+    let text = 'No response';
     const chatResponse = await askMistral(formData);
-    const text = chatResponse.choices[0].message.content;
+
+    if (chatResponse.choices && chatResponse.choices.length > 0) {
+      text = (chatResponse.choices[0].message.content || "") as string;
+    }
+
     setResponse(text);
     setLoading(false);
   };
