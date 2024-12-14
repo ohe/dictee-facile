@@ -102,6 +102,13 @@ export default function Home() {
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Mots:</label>
+        <p className="text-xs text-gray-500 mt-1 flex items-center">
+          <span className="mr-1">Appuyer sur</span>
+          <span className="inline-flex items-center justify-center w-4 h-4 border border-gray-400 rounded mr-1">␣</span>
+          <span className="mr-1">ou</span>
+          <span className="inline-flex items-center justify-center w-4 h-4 border border-gray-400 rounded mr-1">,</span>
+          <span>pour valider un mot</span>
+        </p>
         <input
         type="text"
         onKeyPress={handleWordChange}
@@ -120,6 +127,13 @@ export default function Home() {
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Verbes:</label>
+        <p className="text-xs text-gray-500 mt-1 flex items-center">
+          <span className="mr-1">Appuyer sur</span>
+          <span className="inline-flex items-center justify-center w-4 h-4 border border-gray-400 rounded mr-1">␣</span>
+          <span className="mr-1">ou</span>
+          <span className="inline-flex items-center justify-center w-4 h-4 border border-gray-400 rounded mr-1">,</span>
+          <span>pour valider un mot</span>
+        </p>
         <input
         type="text"
         onKeyPress={handleVerbChange}
@@ -143,22 +157,22 @@ export default function Home() {
           <input type="checkbox" value="présent" onChange={handleTenseChange} className="form-checkbox h-4 w-4 text-indigo-600" />
           <span className="ml-2 text-sm text-gray-700">Présent</span>
         </label>
+        <br />
         <label className="inline-flex items-center">
           <input type="checkbox" value="futur simple" onChange={handleTenseChange} className="form-checkbox h-4 w-4 text-indigo-600" />
           <span className="ml-2 text-sm text-gray-700">Futur simple</span>
         </label>
+        <br />
         <label className="inline-flex items-center">
           <input type="checkbox" value="imparfait" onChange={handleTenseChange} className="form-checkbox h-4 w-4 text-indigo-600" />
           <span className="ml-2 text-sm text-gray-700">Imparfait</span>
         </label>
-        <label className="inline-flex items-center">
-          <input type="checkbox" value="impératif présent" onChange={handleTenseChange} className="form-checkbox h-4 w-4 text-indigo-600" />
-          <span className="ml-2 text-sm text-gray-700">Impératif présent</span>
-        </label>
+        <br />
         <label className="inline-flex items-center">
           <input type="checkbox" value="passé simple" onChange={handleTenseChange} className="form-checkbox h-4 w-4 text-indigo-600" />
           <span className="ml-2 text-sm text-gray-700">Passé simple</span>
         </label>
+        <br />
         <label className="inline-flex items-center">
           <input type="checkbox" value="passé composé" onChange={handleTenseChange} className="form-checkbox h-4 w-4 text-indigo-600" />
           <span className="ml-2 text-sm text-gray-700">Passé composé</span>
