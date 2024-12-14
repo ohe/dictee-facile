@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, FormEvent, ChangeEvent, KeyboardEvent } from 'react';
-
 import { askMistral } from './actions';
 
 interface FormData {

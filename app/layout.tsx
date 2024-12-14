@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -23,11 +24,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <script
+        type="text/javascript"
+        id="bmc-wbtn"
+        className="bmc-wbtn"
+        src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+        data-name="bmc-button"
+        data-slug="ohervieu"
+        data-color="#40DCA5"
+        data-emoji=""
+        data-font="Cookie"
+        data-text="Soutenez cette initiative"
+        data-outline-color="#000000"
+        data-font-color="#ffffff"
+        data-coffee-color="#FFDD00"
+      />
       </body>
     </html>
   );
